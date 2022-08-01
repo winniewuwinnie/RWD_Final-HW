@@ -41,7 +41,7 @@ $("document").ready(function () {
       .siblings(".m-menuBar-open")
       .css("display", "block");
   });
-  $(".dropdown").click(function (event) {
+  $(".aside .dropdown").click(function (event) {
     event.preventDefault();
     $(this).toggleClass("active");
     $(this).siblings(".dropdown-open").slideToggle();
