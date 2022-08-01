@@ -126,12 +126,11 @@
 
 //banner start
 .banner {
-  background-image: url(../images/header_desktop.png); 
-  background-size: cover;
+  background-image: url(../images/header_desktop.png);
   background-attachment: fixed;
-  background-position: right center;
+  background-position: center top;
   background-repeat: no-repeat;
-  height: 570px;
+  height: 420px;
 }
 .banner_title {
   background-color: rgba($color: #000000, $alpha: 0.5);
@@ -151,10 +150,9 @@
     text-align: center;
   }
 }
-@include pad(){
+@include phone(){
   .banner{    
     background-image: url(../images/header_mobile.png); 
-    background-position: center center;
   }
 }
 @include iphoneXR(){

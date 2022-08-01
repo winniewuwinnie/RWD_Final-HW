@@ -268,11 +268,10 @@ p, li {
 }
 .banner {
   background-image: url(../images/header_desktop.png);
-  background-size: cover;
   background-attachment: fixed;
-  background-position: right center;
+  background-position: center top;
   background-repeat: no-repeat;
-  height: 570px;
+  height: 420px;
 }
 
 .banner_title {
@@ -294,10 +293,9 @@ p, li {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   .banner {
     background-image: url(../images/header_mobile.png);
-    background-position: center center;
   }
 }
 @media (max-width: 414px) {
