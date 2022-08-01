@@ -1,0 +1,318 @@
+//order start
+.order_menu {
+  width: 20%;
+  h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    i {
+      margin-right: 16px;
+      font-size: $font-size-l;
+    }
+  }
+  ul li a {
+    padding: 8px;
+    border-bottom: 1px solid $primary-color;
+    &:hover,
+    &:active {
+      background: $primary-color;
+      color: white;
+    }
+  }
+}
+.order_main {
+  width: 76%;
+}
+.order_main_search {
+  margin-bottom: 26px;
+}
+.order_main_search_input {
+  width: 66%;
+  position: relative;
+  input {
+    width: 100%;
+    padding: 7px 36px 7px 10px;
+  }
+  a {
+    background: $primary-color;
+    color: white;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.order_main_search_checkOut {
+  a {
+    position: relative;
+    .number p {
+      color: white;
+      background: lighten($primary-color, 50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: 12px;
+      position: relative;
+      left: 36px;
+      top: -6px;
+      line-height: 14px;
+      text-align: center;
+    }
+  }
+  .br1 {
+    border-right: 1px solid $primary-color;
+    padding-right: 12px;
+    font-weight: bold;
+  }
+  i {
+    font-size: 26px;
+  }
+}
+.order_main_item {
+  flex-wrap: wrap;
+  li {
+    width: 32%;
+    box-shadow: $shadow;
+    margin-bottom: 30px;
+    position: relative;
+    &:hover,
+    :active {
+      box-shadow: 3px 3px 4px rgba($color: black, $alpha: 0.26);
+    }
+    .like {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      .fa-regular {
+        color: white;
+        font-size: 20px;
+        display: block;
+        &.active{
+          display:none;
+        }
+      }
+    }
+    .dislike {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      .fa-solid {
+        display: none;
+        color: white;
+        font-size: 20px;
+        &.active{
+          display:none;
+        }
+      }
+    }
+    img{
+      width: 100%;
+    }
+    h4 {
+      font-size: 20px;
+      text-align: center;
+      line-height: 1;
+      span {
+        font-size: 12px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          background: $primary-color;
+          height: 1px;
+          width: 80%;
+          top: 26px;
+          right: 16px;
+        }
+      }
+    }
+    .bestSell {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      top: -4px;
+      left: 164px;
+      overflow: hidden;
+      h5 {
+        color: white;
+        background: #00cc99;
+        transform: rotate(45deg);
+        font-size: 14px;
+        font-weight: bold;
+        width: 120px;
+        padding: 3px 0;
+        text-align: center;
+        position: relative;
+        top: 16px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 25px;
+          right: 2px;
+          transform: rotate(90deg);
+          /*三角形*/
+          border-color: transparent transparent transparent #00cc99;
+          border-style: solid solid solid solid;
+          /* 設定邊框大小可拼湊出任意形狀的三角形 */
+          border-width: 6px;
+          /* 設定 width、height 可更好理解原理 */
+          height: 0px;
+          width: 0px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 25px;
+          right: 108px;
+          transform: rotate(90deg);
+          /*三角形*/
+          border-color: transparent transparent transparent #00cc99;
+          border-style: solid solid solid solid;
+          /* 設定邊框大小可拼湊出任意形狀的三角形 */
+          border-width: 6px;
+          /* 設定 width、height 可更好理解原理 */
+          height: 0px;
+          width: 0px;
+        }
+      }
+    }
+    p {
+      font-size: 20px;
+      margin: 36px 0px 12px 0px;
+      text-align: center;
+      span {
+        font-weight: bold;
+      }
+    }
+    .container {
+      padding: 14px 10px;
+      a {
+        width: 100%;
+        padding: 4px 0;
+        border: 1px solid lighten($primary-color, 50%);
+        border-radius: 3px;
+        background: transparent;
+        color: lighten($primary-color, 50%);
+        text-align: center;
+        &:hover,
+        &:active {
+          color: white;
+          background: lighten($primary-color, 50%);
+        }
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+@include pad() {
+  .order_menu {
+    width: 22%;
+    h3 {
+      font-size: $font-size-m/1.2;
+      i {
+        font-size: $font-size-m;
+        margin-right: 6px;
+      }
+    }
+  }
+  .order_main {
+    width: 74%;
+  }
+  .order_main_item li {
+    width: 48%;
+    .bestSell {
+      width: 83px;
+      left: 164px;
+      h5 {
+        width: 110px;
+        &::after {
+          right: -2px;
+        }
+        &::before {
+          right: 102px;
+        }
+      }
+    }
+  }
+}
+@include phone() {
+  .order .container{
+    flex-direction: column;
+  }
+  .order_menu{
+    width:100%;
+    margin-bottom: 30px;
+    h3{
+      font-size: $font-size-m;
+      margin-bottom: 8px;
+    }
+    ul li a{
+      padding: 10px 8px;
+    }
+  }
+  .order_main{
+    width:100%;
+  }
+  .order_main_search{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .order_main_search_input{
+    width:100%;
+    margin-bottom: 60px;
+    input{
+      padding: 10px 36px 10px 10px;
+      font-size: 16px;
+    }
+    a{
+      padding: 12px;
+      i{
+        font-size: $font-size-s;
+      }
+    }
+  }
+  .order_main_item li{
+    width:100%;
+    .bestSell {
+      left: 405px;
+      top: -4px;
+    }
+    .like .fa-heart{
+      font-size: $font-size-m;
+    }
+    .dislike .fa-heart{
+      font-size: $font-size-m;
+    }
+    h4{
+      font-size: 22px;
+      span::after{
+        top:34px;
+        width:90%;
+        right:10px;
+      }
+    }
+    .container a{
+      padding: 6px 0;
+    }
+  }
+}
+@include iphoneXR(){
+  .order_main_item li{
+    .bestSell{
+      left:251px;
+    }
+    .like .fa-heart{
+      font-size: $font-size-s;
+    }
+  }
+}
+@include iphoneSE(){
+  .order_main_item li{
+    .bestSell{
+      left:212px;
+    }
+  }
+}
+//order end

@@ -1,0 +1,249 @@
+//feature start
+.feature {
+  h3 {
+    text-align: center;
+    margin-bottom: 36px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 12%;
+      height: 1px;
+      background: #979797;
+      top: 50%;
+      left: 242px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 12%;
+      height: 1px;
+      background: #979797;
+      top: 50%;
+      right: 242px;
+    }
+  }
+}
+.feature_item {
+  width: 30%;
+  img {
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  h4 {
+    font-size: $font-size-s;
+    margin: 20px 0px 12px 0px;
+    text-align: center;
+  }
+}
+@include pad() {
+  .feature {
+    h3::before,
+    h3::after {
+      height: 0px;
+    }
+  }
+  .feature_item {
+    width: 28%;
+    p {
+      line-height: 1.25;
+    }
+  }
+}
+@include phone() {
+  .feature {
+    ul {
+      flex-direction: column;
+    }
+  }
+  .feature_item {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+}
+@include iphoneXR() {
+  .feature_item {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+}
+//feature end
+
+//todayChef start
+.todayChef img {
+  width: 48%;
+}
+.todayChef_info {
+  padding: 0 24px;
+  h3 {
+    color: white;
+    line-height: 1;
+    span {
+      font-size: 16px;
+    }
+  }
+  p {
+    color: white;
+    margin-top: 16px;
+  }
+}
+@include pad() {
+  .todayChef_info {
+    h3 {
+      padding-top: 20px;
+    }
+    p {
+      line-height: 1.25;
+      padding-bottom: 20px;
+    }
+  }
+}
+@include phone() {
+  .todayChef .container {
+    flex-direction: column;
+    margin-bottom: 36px;
+    img {
+      width: 100%;
+      padding: 24px;
+    }
+  }
+  .todayChef_info {
+    padding-bottom: 24px;
+  }
+}
+//todayChef end
+
+//comment start
+.comment h3 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.comment_item {
+  width: 30%;
+}
+.comment_item_info {
+  img {
+    border-radius: 50px;
+  }
+  h4 {
+    margin-left: 12px;
+  }
+}
+.comment_item_content {
+  margin-left: 14px;
+  h4 {
+    margin: 22px 0;
+    font-size: $font-size-s;
+  }
+  .text {
+    margin-bottom: 22px;
+  }
+  .fr {
+    float: right;
+    opacity: 0.75;
+  }
+}
+@include pad() {
+  .comment_item {
+    .text {
+      margin-left: 0px;
+      margin-top: 22px;
+    }
+  }
+  .comment_item_content {
+    margin-left: 0px;
+  }
+}
+@include phone() {
+  .comment ul {
+    flex-direction: column;
+  }
+  .comment_item {
+    width: 98%;
+    margin-bottom: 20px;
+  }
+}
+//comment end
+
+//reserve start
+.reserve {
+  background: rgba($color: #fafafa, $alpha: 0.7);
+  h3 {
+    text-align: center;
+    margin-bottom: 38px;
+  }
+}
+.reserve_info {
+  img {
+    width: 49%;
+  }
+  .pure-form-stacked {
+    width: 49%;
+  }
+  label {
+    margin-bottom: 6px;
+  }
+  .pure-form-stacked input[type="text"],
+  .pure-form-stacked input[type="tel"],
+  .pure-form-stacked input[type="email"],
+  .pure-form-stacked input[type="number"] {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .pure-form-message {
+    margin: -4px 0px 6px 0px;
+    color: $primary-color;
+    font-size: 16px;
+  }
+  .pure-form-stacked input[type="radio"] {
+    margin-right: 32px;
+    // accent-color: lighten($primary-color, 50%);
+  }
+}
+.reserve_info_btn {
+  float: right;
+  margin-top: 28px;
+  .btn-gray {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    margin-right: 12px;
+    &:hover,
+    &:active {
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
+  .btn-orange {
+    background: lighten($primary-color, 50%);
+    color: white;
+    &:hover,
+    &:active {
+      background: lighten($primary-color, 40%);
+    }
+  }
+}
+@include pad() {
+  .reserve_info {
+    img {
+      width: 66%;
+    }
+    .pure-form-stacked {
+      width: 32%;
+    }
+  }
+}
+@include phone() {
+  .reserve_info {
+    flex-direction: column;
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .pure-form-stacked {
+      width: 100%;
+    }
+  }
+}
+//reserve end

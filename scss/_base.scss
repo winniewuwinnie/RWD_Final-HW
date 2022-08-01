@@ -1,0 +1,55 @@
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+a{
+  display:block;
+  text-decoration: none;
+}
+img{
+  max-width:100%;
+  height:auto;
+}
+h1,h2,h3,h4,h5,h6,p,a,label,span{
+  font-family: '微軟正黑體', 'sans-serif';
+}
+h1{
+  font-weight: bold;
+}
+h3{
+  font-size: $font-size-m;
+  line-height: 1.5;
+}
+@include iphoneXR(){
+  h3{
+    font-size: $font-size-m/1.12;
+  }
+}
+h3,h4,p,label,a,li{
+  color:$primary-color;
+}
+p,li{
+  line-height: 1.5;
+}
+.lighten_bg{
+  background: $secondary-color;
+}
+.darken_bg{
+  background: $primary-color;
+}
+.padding{
+  padding: 56px 42px;
+}
+@include iphoneXR(){
+  .padding{
+    padding: 38px 42px;
+  }
+}
+.flex{
+  display: flex;
+}
+.jcsb{
+  justify-content: space-between;
+}
+.aic{
+  align-items: center;
+}

@@ -1,0 +1,25 @@
+@mixin hideText {
+  text-indent: 101%;
+  overflow:hidden;
+  white-space: nowrap;
+}
+@mixin pad {
+  @media(max-width:768px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media(max-width:568px){
+    @content;
+  }
+}
+@mixin iphoneXR {
+  @media(max-width: 414px){
+    @content;
+  }
+}
+@mixin iphoneSE {
+  @media(max-width:375px){
+    @content;
+  }
+}

@@ -1,0 +1,86 @@
+//login start
+.login {
+  padding: 50px 0px;
+}
+.login_title {
+  text-align: center;
+  margin-bottom: 36px;
+  h3 {
+    font-size: $font-size-m;
+    margin-top: 6px;
+  }
+}
+.login_info {
+  width: 30%;
+  padding: 16px;
+  border-top: 4px solid lighten($primary-color, 50%);
+  box-shadow: $shadow;
+  margin: 0 auto;
+  h4 {
+    font-size: $font-size-s;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .pure-form-stacked {
+    .login_info_mail,
+    .login_info_password {
+      position: relative;
+      i {
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        color: rgba($color: $primary-color, $alpha: 0.5);
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+    input {
+      width: 100%;
+      padding-left: 28px;
+    }
+    .password {
+      margin-top: 16px;
+    }
+  }
+  .pure-form-message {
+    color: lighten($primary-color, 50%);
+    margin-bottom: 30px;
+  }
+}
+.login_info_btn {
+  .btn-gray {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    width: 48%;
+    &:hover,
+    &:active {
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
+  .btn-orange {
+    background: lighten($primary-color, 50%);
+    color: white;
+    width: 48%;
+    &:hover,
+    &:active {
+      background: lighten($primary-color, 40%);
+    }
+  }
+}
+@include phone(){
+  .login_info{
+    width:60%;
+  }
+}
+@include iphoneXR(){
+  .login_info{
+    width:72%;
+  }
+}
+@include iphoneSE(){
+  .login_info{
+    width:80%;
+  }
+}
+//login end

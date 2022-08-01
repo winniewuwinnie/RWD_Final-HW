@@ -1,0 +1,91 @@
+//register start
+.register {
+  padding: 50px 0px;
+}
+.register_title {
+  text-align: center;
+  margin-bottom: 36px;
+  h3 {
+    font-size: $font-size-m;
+    margin-top: 6px;
+  }
+}
+.register_info {
+  width: 60%;
+  padding: 16px;
+  border-top: 4px solid lighten($primary-color, 50%);
+  box-shadow: $shadow;
+  margin: 0 auto;
+  h4 {
+    font-size: $font-size-s;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
+.register_info_content {
+  p {
+    width: 48%;
+    font-size: 14px;
+    span{
+      font-size: $font-size-s;
+    }
+  }
+  .pure-form-stacked {
+    width: 49%;
+    .login_info_mail,
+    .login_info_password_first,
+    .login_info_password_second {
+      position: relative;
+      i {
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        color: rgba($color: $primary-color, $alpha: 0.5);
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+    .login_info_password_first{
+      margin-bottom: 12px;
+    }
+    input {
+      width: 100%;
+      padding-left: 28px;
+    }
+    .password {
+      margin-top: 16px;
+    }
+    .pure-form-message {
+      color: lighten($primary-color, 50%);
+    }
+    .btn-orange {
+      float: right;
+      background: lighten($primary-color, 50%);
+      padding: 6px 36px;
+      margin-top: 30px;
+      &:hover,
+      &:active {
+      background: lighten($primary-color, 40%);
+    }
+    }
+  }
+}
+@include phone(){
+  .register_info{
+    width: 80%;
+  }
+}
+@include iphoneXR(){
+  .register_info_content{
+    flex-direction: column;
+    p{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .pure-form-stacked{
+      width:100%;
+    }
+  }
+}
+//register end
